@@ -2,10 +2,10 @@
 My home lab setup with various containers/VMs that I am self hosting! Pretty much everything I have is due to other creators which I have followed.
 
 ## Table of Contents
-- Apps
-- Media
-- Cloud
-- [Storage](https://github.com/toshjr22/HomeLab/tree/main/Storage)
+- [Apps](/Apps/README.md)
+- [Media](/Media/README.md)
+- [Cloud](/Cloud/README.md)
+- [Storage](/Storage/README.md)
 
 ## Hardware
 Two Proxmox nodes running distinct roles for NAS/testing and production workloads.

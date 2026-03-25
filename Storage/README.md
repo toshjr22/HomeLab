@@ -46,8 +46,9 @@ Create a credentials file:
 - Secure it:
   - `sudo chmod 600 /etc/samba/credentials`
 - Add to `/etc/fstab`:
-  - `//SERVER-IP/data /mnt/data cifs x-systemd.automount,credentials=/etc/samba/credentials,uid=1000,gid=1000 0 0`
+  - `//SERVER-IP/tank /mnt/data cifs x-systemd.automount,credentials=/etc/samba/credentials,uid=1000,gid=1000 0 0`
 - Mount it:
+  - `sudo systemctl daemon-reload`
   - `sudo mount -a`
 
 ### Windows: Connecting to Shares
@@ -56,12 +57,12 @@ From Windows: Since `guest ok = no` is set in the config, Windows requires expli
 Map Network Drive (Recommended)
 - Open File Explorer
 - Right-click "This PC" → "Map network drive"
-- Enter `\\SERVER-IP\data` (e.g., `\\192.168.1.100\data`)
+- Enter `\\SERVER-IP\tank` (e.g., `\\192.168.1.100\tank`)
 - Check ✅ "Connect using different credentials"
 - Enter your Samba username and password (created with `smbpasswd`)
 
 Quick Access
-- Press `Win + R`, type `\\SERVER-IP\data`, and press Enter.
+- Press `Win + R`, type `\\SERVER-IP\tank`, and press Enter.
 - Enter credentials when prompted.
 
 ### iOS
